@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica js-calc</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+
+<body>  
+    <main>
+
+        <div>
+            <h1>
+                Simple Calculator
+            </h1>
+        </div>
+        
+        <div>
+            <input type="number" name="valor1" value="0" id="valor1">
+        </div>
+        <div>
+            <input type="number" name="valor2" value="0" id="valor2">
+        </div>
+        
+        <div>
+            <button onclick="cambioValor(1)">+</button>
+            <button onclick="cambioValor(2)">-</button>
+            <button onclick="cambioValor(3)">x</button>
+            <button onclick="cambioValor(4)">/</button>
+        </div>
+    
+        <div>
+            <h2 id="resultado"></h2>
+        </div>
+
+    </main>
+    
+   
+
+    <div class="dentroHis">
+        <div id="historial">
+        <p id="oldResult"></p>
+    </div>
+    
+    </div>
+
+    <script>
+
+        valor1 = document.getElementById("valor1").value
+        valor2 = document.getElementById("valor2").value
+        resultado = document.getElementById("resultado").value
+        operationHistory = [];
+        
+        function cambioValor(operator) {
+        resultado = document.getElementById("resultado").value
+        valor1 = document.getElementById("valor1").value
+        valor2 = document.getElementById("valor2").value
+        valor1 = parseFloat(valor1, 10)
+        valor2 = parseFloat(valor2, 10)
+        noPuedes = 'Syntax Error'
+        switch (operator) {
+                case 1:
+                    console.log('caso +');
+                    resultado = (valor1 + valor2);
+                    document.getElementById('resultado').innerText = resultado
+                    operationHistory.push(resultado)
+                    console.log(operationHistory)
+                    break;
+            
+                case 2:
+                    console.log('caso -');
+                    resultado = (valor1 - valor2);
+                    document.getElementById('resultado').innerText = resultado
+                    operationHistory.push(resultado)
+                    console.log(operationHistory)
+                    break; 
+                
+                case 3:
+                    console.log('caso x'); 
+                    resultado = (valor1 * valor2); 
+                    document.getElementById('resultado').innerText = resultado
+                    operationHistory.push(resultado)
+                    console.log(operationHistory)
+                    break; 
+                
+                case 4:
+                    console.log('caso /');
+                    if (valor2 == 0) {
+                        document.getElementById('resultado').innerText = noPuedes
+                        break;
+                    } else {
+                        resultado = (valor1 / valor2);
+                    document.getElementById('resultado').innerText = resultado
+                    operationHistory.push(resultado)
+                    console.log(operationHistory)
+                    break; 
+                    }
+                default:
+                    break;
+            }
+    
+            mostrarHistorial = operationHistory.toString();
+            mostrarHistorial = mostrarHistorial.replace(/,/g, ' ');
+            document.getElementById('oldResult').innerText = mostrarHistorial
+    }
+    
+    
+    </script>
+
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+        main {
+            height: 67vh;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-left: 7%;
+            padding: 50px;
+            background-color: #212121;
+            border: solid rgb(24, 23, 23) 2px;
+            border-radius: 7px;
+            box-shadow: 0 0 7px 7px #292929;
+
+
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            background-color:#1b1b1b;
+
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+        }
+        input, button {
+
+            text-align: center;
+            font-size: 2rem;
+            border: none;
+            background-color: #424242;
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+h1 {
+    padding-bottom: 10px;
+}
+
+.dentroHis {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: -30px;
+}
+#historial {
+    text-align: center;
+    margin-top: 70px;
+    width: 40px;
+    margin-bottom: 10px;
+}
+    </style>
+</body>
+
+</html>
