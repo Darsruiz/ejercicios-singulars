@@ -1,4 +1,4 @@
-https://raw.githubusercontent.com/Darsruiz/ejercicios-singulars/master/ejercicio-api/quotes.png
+![Alt text](/quotes.png?raw=true "Quotes Example")
 
 API Practice: created using:
 
