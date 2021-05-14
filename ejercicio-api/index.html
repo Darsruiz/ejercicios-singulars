@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/34382240ad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div id="title-subtitle-container" class="box container is-hidden-mobile is-hidden-tablet-only">
+      <h1 class="title is-size-4 has-text-left has-text-white-bis">
+        Quotes, Weather & Date
+      </h1>
+      <h2 class="subtitle is-size-6 has-text-left has-text-white">
+        API & BulmaCSS Practice
+      </h2>
+    </div>
+  </div>
+</section>
+    
+<div class="box container mt-5 mx-3 is-hidden-desktop is-hidden-fullhd">
+  <div id="quotes" class="has-text-centered is-size-3 has-text-white">
+    Loading...
+  </div>
+</div>
+<div class="box container mt-5 is-hidden-mobile is-hidden-tablet-only">
+  <div id="quotesMobile" class="has-text-centered is-size-3 has-text-white">
+    Loading...
+  </div>
+</div>
+
+<div class="container mt-0 m6">
+  <div class="container has-text-centered">
+    <div class="button">
+      <span id="weather" class="has-text-centered is-size-0 has-text-white ">
+      Loading...
+      </span>
+      <span class="has-text-white" > 
+      </span>
+    <span id="weatherIcons" class="has-text-centered is-size-0 has-text-white mt-1">
+    
+    </span>
+    </div>
+    
+  </div>
+  
+</div>
+
+
+<div class="has-text-centered">
+    <button id="button" class="button mt-6 has-text-white is-ghost">New Quote</button>
+  </div>
+
+</body>
+<style>
+    html {
+      background-image: url(https://picsum.photos/1920/1080);
+      background-color: black;
+    }
+    .box {
+      background-color: rgba(0, 0, 0, 0.234);
+      backdrop-filter: blur(2px);
+    }
+    #title-subtitle-container {
+      width: fit-content;
+      margin-left: 0;
+    }
+    .button {
+      background-color: rgba(0, 0, 0, 0.234);
+      backdrop-filter: blur(2px);
+    }
+    
+</style>
+<script src="apikey.js"></script>
+<script src="ejercicio-chistes.js"></script>
+
+</html>
