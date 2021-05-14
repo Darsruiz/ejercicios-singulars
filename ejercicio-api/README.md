@@ -1,4 +1,4 @@
-![Alt text](ejercicio-api/quotes.png?raw=true "Quotes Example")
+![Alt text](quotes.png?raw=true "Quotes Example")
 
 API Practice: created using:
 
