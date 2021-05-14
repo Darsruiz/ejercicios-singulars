@@ -19,9 +19,6 @@ async function fetchWeather() {
     });
 }
 
-function googleWeather() {
-  return 'http://www.google.com/search?q=Barcelona+Weather&ie=utf-8&oe=utf-8'
-}
 fetchQuotes();
 fetchWeather();
 
