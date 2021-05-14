@@ -17,7 +17,9 @@ In order to get weather information you have to register at: https://www.visualc
 2. Create a file named: 'apiKey.js'
 3. Fill the js like this:
 
+```javascript
     const url = "[your-api-goes-here]"
+```
 
 4.- Enjoy!
 
