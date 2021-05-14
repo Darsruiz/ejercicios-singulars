@@ -16,50 +16,11 @@ async function fetchWeather() {
       console.log(data.currentConditions)
       document.getElementById("weather").innerHTML =
         data.description;
-      const id = data.ciudades[6].stateSky.id;
-      weatherIcon(id);
     });
 }
 
-function weatherIcon(id) {
-  console.log(id);
-  switch (id) {
-    case "23":
-      document.getElementById("weatherIcons").innerHTML =
-        '<i class="fas fa-cloud-rain"></i>';
-      break;
-    case "51":
-      document.getElementById("weatherIcons").innerHTML =
-        '<i class="fas fa-cloud"></i>';
-      break;
-
-    case "41":
-      document.getElementById("weatherIcons").innerHTML =
-        '<i class="fas fa-sun"></i>';
-      break;
-
-    case "28":
-      document.getElementById("weatherIcons").innerHTML =
-        '<i class="fas fa-clouds"></i>';
-      break;
-
-    case "46":
-      document.getElementById("weatherIcons").innerHTML =
-        '<i class="far fa-clouds"></i>';
-      break;
-    case "48":
-      document.getElementById("weatherIcons").innerHTML =
-        '<i class="far fa-thunderstorm"></i>';
-      break;
-
-    case "15":
-      document.getElementById("weatherIcons").innerHTML =
-        '<i class="fas fa-cloud-meatball"></i>';
-      break;
-    default:
-      document.getElementById("weatherIcons").innerHTML = "";
-      break;
-  }
+function googleWeather() {
+  return 'http://www.google.com/search?q=Barcelona+Weather&ie=utf-8&oe=utf-8'
 }
 fetchQuotes();
 fetchWeather();

@@ -36,15 +36,12 @@
 
 <div class="container mt-0 m6">
   <div class="container has-text-centered">
-    <div class="button">
-      <span id="weather" class="has-text-centered is-size-0 has-text-white ">
-      Loading...
-      </span>
-      <span class="has-text-white" > 
-      </span>
-    <span id="weatherIcons" class="has-text-centered is-size-0 has-text-white mt-1">
-    
-    </span>
+    <div class="button has-text-white is-ghost">
+      <a href="http://www.google.com/search?q=Weather&ie=utf-8&oe=utf-8" class="has-text-white ">
+        <span id="weather" class="has-text-centered is-size-0 has-text-white ">
+          Loading...
+        </span>
+      </a>
     </div>
     
   </div>
@@ -53,11 +50,16 @@
 
 
 <div class="has-text-centered">
-    <button id="button" class="button mt-6 has-text-white is-ghost">New Quote</button>
+      <button id="button" class="button mt-6 has-text-white is-ghost">
+        New Quote
+      </button>
   </div>
 
 </body>
 <style>
+  * {
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+  }
     html {
       background-image: url(https://picsum.photos/1920/1080);
       background-color: black;
@@ -71,7 +73,6 @@
       margin-left: 0;
     }
     .button {
-      background-color: rgba(0, 0, 0, 0.234);
       backdrop-filter: blur(2px);
     }
     
