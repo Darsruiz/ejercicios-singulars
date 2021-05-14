@@ -1,4 +1,4 @@
-https://github.com/Darsruiz/ejercicios-singulars/blob/master/ejercicio-api/quotes.png
+https://raw.githubusercontent.com/Darsruiz/ejercicios-singulars/master/ejercicio-api/quotes.png
 
 API Practice: created using:
 
