@@ -1,4 +1,4 @@
-#Weather
+https://github.com/Darsruiz/ejercicios-singulars/blob/master/ejercicio-api/quotes.png
 
 API Practice: created using:
 
