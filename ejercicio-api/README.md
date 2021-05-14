@@ -21,7 +21,7 @@ In order to get weather information you have to register at: https://www.visualc
     const url = "[your-api-goes-here]"
 ```
 
-4.- Enjoy!
+4. Enjoy!
 
 You can also replace the variable "url" at line 13 with your apiKey without the need to create a file.
 
