@@ -6,6 +6,10 @@ async function fetchQuotes() {
     .then((data) => {
       document.getElementById("quotes").innerHTML = data.quotes[0].text;
       document.getElementById("quotesMobile").innerHTML = data.quotes[0].text;
+    })
+    .catch(() => {
+      document.getElementById("quotes").innerHTML = 'Cannot get quote, quotes server might be down';
+      document.getElementById("quotesMobile").innerHTML = 'Cannot get quote, quotes server might be down';
     });
 }
 
