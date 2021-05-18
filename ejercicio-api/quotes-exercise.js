@@ -13,9 +13,12 @@ async function fetchWeather() {
   await fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.currentConditions)
       document.getElementById("weather").innerHTML =
         data.description;
+    })
+    .catch(() => {
+      document.getElementById("weather").innerHTML =
+        'Cannot get weather information, Click me to Google It';
     });
 }
 
